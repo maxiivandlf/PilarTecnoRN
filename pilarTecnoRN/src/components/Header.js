@@ -1,19 +1,14 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  SafeAreaView,
-} from 'react-native';
+import { View, StyleSheet, TouchableOpacity, SafeAreaView } from 'react-native';
 import React from 'react';
 
 import { Header as RNEHeader, Icon } from '@rneui/base';
+import { theme } from '../constants/theme';
 
-const Header = () => {
+const Header = ({ titleHeader }) => {
   return (
     <SafeAreaView>
       <RNEHeader
-        backgroundColor='red'
+        backgroundColor={theme.colors.accent}
         leftComponent={{
           icon: 'menu',
           color: '#fff',
@@ -28,7 +23,7 @@ const Header = () => {
             </TouchableOpacity>
           </View>
         }
-        centerComponent={{ text: 'Header', style: styles.heading }}
+        centerComponent={{ text: titleHeader, style: styles.heading }}
       />
     </SafeAreaView>
   );
@@ -45,7 +40,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     color: 'white',
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: 'bold',
   },
   headerRight: {
