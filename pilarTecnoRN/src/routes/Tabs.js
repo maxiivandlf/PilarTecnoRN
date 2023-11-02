@@ -1,10 +1,13 @@
 import React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Icon } from '@rneui/themed';
 import { theme } from '../constants/theme';
 
 import Home from '../screens/tabs/Home';
-import Maps from '../screens/tabs/Maps';
+import { MapsStackScreen } from './MapsStack';
+import { ProfileStackScreen } from './ProfileStack';
+import { ListsStackScreen } from './ListStack';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -23,26 +26,54 @@ const Tabs = () => {
           tabBarLabel: 'Inicio',
           tabBarAccessibilityLabel: 'Inicio',
 
-          tabBarIcon: () => (
-            <Icon
-              name={'home'}
-              type='font-awesome-5'
-              size={20}
-              color={theme.colors.primary}
+          tabBarIcon: ({ focused }) => (
+            <MaterialCommunityIcons
+              name='home'
+              color={focused ? theme.colors.primary : theme.colors.base100}
+              size={26}
             />
           ),
         }}
       />
       <Tab.Screen
-        name='Maps'
-        component={Maps}
+        name='MapStack'
+        component={MapsStackScreen}
         options={{
-          tabBarIcon: () => (
+          tabBarLabel: 'Mapa',
+          tabBarIcon: ({ focused }) => (
             <Icon
               name={'map'}
               type='font-awesome-5'
               size={20}
-              color={theme.colors.primary}
+              color={focused ? theme.colors.primary : theme.colors.base100}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name='List'
+        component={ListsStackScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Icon
+              name={'file'}
+              type='font-awesome-5'
+              size={20}
+              color={focused ? theme.colors.primary : theme.colors.base100}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name='Perfil'
+        component={ProfileStackScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <Icon
+              name={'user'}
+              type='font-awesome-5'
+              size={20}
+              color={focused ? theme.colors.primary : theme.colors.base100}
             />
           ),
         }}
