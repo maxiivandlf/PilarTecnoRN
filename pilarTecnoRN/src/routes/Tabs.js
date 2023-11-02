@@ -39,7 +39,7 @@ const Tabs = () => {
         name='MapStack'
         component={MapsStackScreen}
         options={{
-          tabBarLabel: 'Mapa',
+          tabBarLabel: 'Mapas',
           tabBarIcon: ({ focused }) => (
             <Icon
               name={'map'}
