@@ -1,9 +1,7 @@
-import Home from './tabs/Home';
 import Login from './Login';
-import Maps from './tabs/Maps';
+import ListDetails from './ListDetails';
 
 export const screens = {
-  Home,
   Login,
-  Maps,
+  ListDetails,
 };
