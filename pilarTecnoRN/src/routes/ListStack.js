@@ -8,7 +8,10 @@ const ListsStack = createNativeStackNavigator();
 
 export const ListsStackScreen = () => {
   return (
-    <ListsStack.Navigator screenOptions={{ headerShown: false }}>
+    <ListsStack.Navigator
+      initialRouteName='Lists'
+      screenOptions={{ headerShown: false }}
+    >
       <ListsStack.Screen name='Lists' component={Lists} />
       <ListsStack.Screen name='ListDetail' component={ListDetail} />
     </ListsStack.Navigator>
