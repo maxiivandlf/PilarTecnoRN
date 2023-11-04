@@ -21,8 +21,13 @@ const Home = () => {
           <TouchableOpacity style={styles.btn}>
             <Text>Home</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn}>
-            <Text>Cuadro2</Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('List');
+            }}
+            style={styles.btn}
+          >
+            <Text>Pokemons</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.container}>
