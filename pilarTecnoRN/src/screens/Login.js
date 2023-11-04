@@ -7,7 +7,6 @@ import {
   TextInput,
   TouchableOpacity,
   ImageBackground,
-  Image,
 } from 'react-native';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import React from 'react';
