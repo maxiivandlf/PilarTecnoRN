@@ -39,8 +39,13 @@ const Home = () => {
           >
             <Text>Maps</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.btn}>
-            <Text>Cuadro4</Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('Perfil');
+            }}
+            style={styles.btn}
+          >
+            <Text>Perfil</Text>
           </TouchableOpacity>
         </View>
       </View>
