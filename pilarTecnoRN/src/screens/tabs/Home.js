@@ -4,6 +4,7 @@ import {
   SafeAreaView,
   StyleSheet,
   TouchableOpacity,
+  Alert,
 } from 'react-native';
 import React from 'react';
 import { components } from '../../components';
@@ -18,7 +19,10 @@ const Home = () => {
       <components.Header titleHeader='INICIO' />
       <View style={styles.home}>
         <View style={styles.container}>
-          <TouchableOpacity style={styles.btn}>
+          <TouchableOpacity
+            onPress={() => Alert.alert('Ya estas en el home')}
+            style={styles.btn}
+          >
             <Text>Home</Text>
           </TouchableOpacity>
           <TouchableOpacity
